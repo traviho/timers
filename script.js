@@ -10,3 +10,14 @@ function countdown(n) {
     }, 1000)
 }
 
+function randomGame() {
+    count = 0
+    var timer = setInterval(function() {
+        count += 1;
+        num = Math.random();
+        if (num > 0.75) {
+            clearInterval(timer)
+            console.log("it took", count, "tries")
+        }
+    }, 1000)
+}
