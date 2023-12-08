@@ -10,6 +10,16 @@ function countdown(n) {
     }, 1000)
 }
 
+function countdownFromInput() {
+    const value = Number(document.getElementById("countdown-input").value);
+    if (value == "" || isNaN(value)) {
+        alert("You must enter a valid number of seconds");
+    } else {
+        countdown(value);
+        document.getElementById("countdown-input").value = ""
+    }
+}
+
 function randomGame() {
     count = 0
     var timer = setInterval(function() {
